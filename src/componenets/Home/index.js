@@ -5,6 +5,7 @@ import './index.scss';
 import AnimatedLetters from "../AnimatedLetters";
 import '../../componenets/AnimatedLetters/index.scss';
 import Logo from "./Logo";
+import Loader from "react-loaders";
 
 
 
@@ -24,6 +25,7 @@ const Home = () =>{
     }, []);
 
     return (
+        <>
     <div className="container home-page">
         <div className="text-zone">
             <h1>
@@ -54,7 +56,10 @@ const Home = () =>{
 
         </div>
 
+
     </div>
+            <Loader type="square-spin" />
+        </>
 );
 
 }
