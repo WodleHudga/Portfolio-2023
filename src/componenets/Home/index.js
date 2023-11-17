@@ -4,6 +4,7 @@ import React, {useEffect, useState} from 'react';
 import './index.scss';
 import AnimatedLetters from "../AnimatedLetters";
 import '../../componenets/AnimatedLetters/index.scss';
+import Logo from "./Logo";
 
 
 
@@ -13,8 +14,16 @@ const Home = () =>{
     const nameArray= ['a','i','e','s','h']
     const jobArray = ['w','e','b',' ','d','e','v','e','l','o','p','e','r'];
 
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            setLetterClass('text-animate-hover');
+        }, 4000);
 
-return (
+        // Clear the timeout when the component unmounts
+        return () => clearTimeout(timeoutId);
+    }, []);
+
+    return (
     <div className="container home-page">
         <div className="text-zone">
             <h1>
@@ -40,6 +49,7 @@ return (
             <h2>Frontend Developer</h2>
             <Link to='/contact' className='flat-button'>Contact Me</Link>
 
+            <Logo />
 
 
         </div>
