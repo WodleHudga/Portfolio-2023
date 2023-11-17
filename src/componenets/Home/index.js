@@ -58,7 +58,7 @@ const Home = () =>{
 
 
     </div>
-            <Loader type="square-spin" />
+            <Loader type="square-spin" active />
         </>
 );
 

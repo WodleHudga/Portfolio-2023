@@ -69,7 +69,7 @@ function About() {
                 </div>
 
             </div>
-            <Loader type="square-spin" />
+            <Loader type="square-spin" active />
         </>
 
 
